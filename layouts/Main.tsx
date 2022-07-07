@@ -1,10 +1,12 @@
 import * as React from 'react';
-import { StyleSheet, Text, View, ScrollView } from 'react-native';
+import { StyleSheet, Text, ScrollView } from 'react-native';
+
+import { Close as CloseIcon } from '../components/Icons';
 
 const Main = () => {
   return (
     <ScrollView style={styles.container}>
-      <Text>Main</Text>
+      <CloseIcon type="close" style={styles.closeIcon} />
     </ScrollView>
   );
 };
@@ -15,6 +17,10 @@ const styles = StyleSheet.create({
     paddingTop: 60,
     paddingBottom: 40,
     paddingHorizontal: 16,
+  },
+  closeIcon: {
+    marginLeft: 10,
+    marginBottom: 30,
   },
 });
 

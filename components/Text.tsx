@@ -33,11 +33,7 @@ const Text: React.FunctionComponent<TextProps> = ({ children, weight, size }) =>
     return null;
   }
 
-  return (
-    <>
-      <RCText style={{ fontFamily: weight, fontSize: size }}>{children}</RCText>
-    </>
-  );
+  return <RCText style={{ fontFamily: weight, fontSize: size }}>{children}</RCText>;
 };
 
 export default Text;
