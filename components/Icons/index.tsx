@@ -1,3 +1,5 @@
 import Close from './Close';
+import More from './More';
+import Direction from './Direction';
 
-export { Close };
+export { Close, More, Direction };
