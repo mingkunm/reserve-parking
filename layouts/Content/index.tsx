@@ -2,6 +2,7 @@ import { FunctionComponent } from 'react';
 import { View, StyleSheet } from 'react-native';
 
 import Location, { LocationProps } from './Location';
+import { Parking as ParkingIcon } from '../../components/Icons';
 
 interface ParkingDate {
   date: string;
@@ -33,6 +34,7 @@ const Content: FunctionComponent<ContentProps> = ({ content }) => {
 
   return (
     <View style={styles.container}>
+      <ParkingIcon style={styles.parkingIcon} />
       <Location
         address={location.address}
         parkingLot={location.parkingLot}
@@ -52,6 +54,11 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     borderRadius: 8,
     // TODO: box-shadow
+  },
+  parkingIcon: {
+    position: 'absolute',
+    left: 18,
+    top: -14,
   },
 });
 
