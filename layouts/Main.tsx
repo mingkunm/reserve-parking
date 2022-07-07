@@ -2,11 +2,16 @@ import * as React from 'react';
 import { StyleSheet, Text, ScrollView } from 'react-native';
 
 import { Close as CloseIcon } from '../components/Icons';
+import Header from './Header';
 
 const Main = () => {
   return (
     <ScrollView style={styles.container}>
       <CloseIcon type="close" style={styles.closeIcon} />
+      <Header
+        header="Nice! Your Monthly parking is Confirmed."
+        subHeader="Your reservation details are below."
+      />
     </ScrollView>
   );
 };

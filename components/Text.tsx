@@ -15,9 +15,10 @@ interface TextProps {
   children: string;
   weight: '300' | '400' | '500' | '600' | '700' | '800' | '900';
   size: number;
+  style?: React.CSSProperties | any;
 }
 
-const Text: React.FunctionComponent<TextProps> = ({ children, weight, size }) => {
+const Text: React.FunctionComponent<TextProps> = ({ children, weight, size, style = {} }) => {
   /* @info */ const [loaded] = useFonts({
     300: Rubik_300Light,
     400: Rubik_400Regular,
@@ -33,7 +34,7 @@ const Text: React.FunctionComponent<TextProps> = ({ children, weight, size }) =>
     return null;
   }
 
-  return <RCText style={{ fontFamily: weight, fontSize: size }}>{children}</RCText>;
+  return <RCText style={{ fontFamily: weight, fontSize: size, ...style }}>{children}</RCText>;
 };
 
 export default Text;
