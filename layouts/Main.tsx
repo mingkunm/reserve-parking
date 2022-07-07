@@ -21,7 +21,7 @@ const Main = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: 60,
+    paddingTop: '10%',
     paddingBottom: 40,
     paddingHorizontal: 16,
   },

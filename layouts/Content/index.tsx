@@ -48,7 +48,7 @@ const Content: FunctionComponent<ContentProps> = ({ content }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: 24,
+    marginTop: 30,
     paddingTop: 40,
     paddingHorizontal: 24,
     backgroundColor: 'white',
