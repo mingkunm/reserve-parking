@@ -4,14 +4,14 @@ import { StyleSheet, Text, ScrollView } from 'react-native';
 import { Close as CloseIcon } from '../components/Icons';
 import Header from './Header';
 
+// TODO: Mock data
+import { header, content } from '../mock';
+
 const Main = () => {
   return (
     <ScrollView style={styles.container}>
       <CloseIcon type="close" style={styles.closeIcon} />
-      <Header
-        header="Nice! Your Monthly parking is Confirmed."
-        subHeader="Your reservation details are below."
-      />
+      <Header header={header.header} subHeader={header.subHeader} />
     </ScrollView>
   );
 };

@@ -3,7 +3,7 @@ import { View, StyleSheet } from 'react-native';
 
 import Text from '../components/Text';
 
-interface HeaderProps {
+export interface HeaderProps {
   header: string;
   subHeader: string;
 }

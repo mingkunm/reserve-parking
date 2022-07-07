@@ -7,7 +7,7 @@ interface ParkingDate {
   time: string;
 }
 
-interface ContentProps {
+export interface ContentProps {
   location: {
     parkingLot: string;
     address: string;
@@ -23,7 +23,7 @@ interface ContentProps {
   user: {
     avatar: string;
     name: string;
-    owner?: string;
+    owner: string;
     message: string;
   };
 }
