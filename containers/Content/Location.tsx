@@ -3,15 +3,13 @@ import { View, StyleSheet } from 'react-native';
 
 import Text from '../../components/Text';
 import { More as MoreIcon, Direction as DirectionIcon } from '../../components/Icons';
+import { useParkingContext } from '../../context';
 
-export interface LocationProps {
-  parkingLot: string;
-  address: string;
-  spot: string;
-  more: string;
-}
+const Location: FunctionComponent = () => {
+  const parkingContext = useParkingContext();
 
-const Location: FunctionComponent<LocationProps> = ({ parkingLot, address, spot, more }) => {
+  const { parkingLot, address, spot } = parkingContext.parkingInfo.location;
+
   return (
     <View style={styles.container}>
       <View style={styles.addressContainer}>

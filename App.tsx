@@ -1,6 +1,8 @@
+import { createContext, useEffect, useState } from 'react';
 import { StyleSheet, SafeAreaView, ImageBackground } from 'react-native';
 
-import Main from './layouts/Main';
+import Main from './containers/Main';
+import ParkingContextProvider from './context';
 
 const backgroundImage = require('./assets/images/bg-map.png');
 
@@ -8,7 +10,9 @@ export default function App() {
   return (
     <ImageBackground source={backgroundImage} resizeMode="cover" style={styles.background}>
       <SafeAreaView style={styles.container}>
-        <Main />
+        <ParkingContextProvider>
+          <Main />
+        </ParkingContextProvider>
       </SafeAreaView>
     </ImageBackground>
   );

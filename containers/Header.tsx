@@ -3,19 +3,14 @@ import { View, StyleSheet } from 'react-native';
 
 import Text from '../components/Text';
 
-export interface HeaderProps {
-  header: string;
-  subHeader: string;
-}
-
-const Header: FunctionComponent<HeaderProps> = ({ header, subHeader }) => {
+const Header: FunctionComponent = () => {
   return (
     <View style={styles.container}>
       <Text weight="900" size={24} style={styles.header}>
-        {header}
+        Nice! Your Monthly parking is Confirmed.
       </Text>
       <Text weight="400" size={14} style={styles.subHeader}>
-        {subHeader}
+        Your reservation details are below.
       </Text>
     </View>
   );
