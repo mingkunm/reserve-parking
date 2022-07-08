@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
     width: 24,
     borderBottomColor: '#EAEDF0',
     borderBottomWidth: 1,
-    bottom: 0,
+    bottom: -1,
     right: -24,
   },
 });
