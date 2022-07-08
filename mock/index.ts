@@ -30,6 +30,12 @@ const parkingInfo: ParkingInfo = {
         name: 'Annie W.',
         owner: 'Owner',
         message: 'some info'
+    },
+    position: {
+        latitude: 34.08215,
+        longitude: -118.37625,
+        latitudeDelta: 0.0922,
+        longitudeDelta: 0.0421,
     }
 }
 

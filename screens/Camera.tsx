@@ -17,7 +17,7 @@ export default function CameraScreen({ navigation }) {
 
   if (!hasPermission === null) {
     navigation.navigate(Screens.Main);
-    return;
+    return <View />;
   }
 
   return (

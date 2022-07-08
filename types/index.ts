@@ -17,6 +17,13 @@ interface UserInfo {
     owner: string;
     message: string;
 }
+
+interface ParkingLotPosition {
+  latitude: number,
+  longitude: number,
+  latitudeDelta: number,
+  longitudeDelta: number,
+}
   
 export enum Screens {
   Main = 'main',
@@ -32,6 +39,7 @@ export default interface ParkingInfo {
     instructions: string;
     purchaseAdditionalMonth: string;
     amount: string;
-    user: UserInfo
+    user: UserInfo,
+    position: ParkingLotPosition
 }
 

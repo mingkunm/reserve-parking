@@ -30,6 +30,12 @@ const defaultParkingInfo: ParkingInfo = {
     owner: '',
     message: '',
   },
+  position: {
+    latitude: 0,
+    latitudeDelta: 0,
+    longitude: 0,
+    longitudeDelta: 0,
+  },
 };
 
 export interface ParkingContextProps {
