@@ -1,28 +1,23 @@
-import { createContext, useEffect, useState } from 'react';
-import { StyleSheet, SafeAreaView, ImageBackground } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import Main from './containers/Main';
-import ParkingContextProvider from './context';
+import MainScreen from './screens/Main';
+import CameraScreen from './screens/Camera';
+import { Screens } from './types';
 
-const backgroundImage = require('./assets/images/bg-map.png');
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <ImageBackground source={backgroundImage} resizeMode="cover" style={styles.background}>
-      <SafeAreaView style={styles.container}>
-        <ParkingContextProvider>
-          <Main />
-        </ParkingContextProvider>
-      </SafeAreaView>
-    </ImageBackground>
+    <NavigationContainer>
+      <Stack.Navigator
+        initialRouteName={Screens.Main}
+        screenOptions={{
+          headerShown: false,
+        }}>
+        <Stack.Screen name={Screens.Main} component={MainScreen} />
+        <Stack.Screen name={Screens.Camera} component={CameraScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  background: {
-    flex: 1,
-  },
-});

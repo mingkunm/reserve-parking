@@ -18,6 +18,11 @@ interface UserInfo {
     message: string;
 }
   
+export enum Screens {
+  Main = 'main',
+  Camera ='camera'
+}
+
 export default interface ParkingInfo {
     location: LocationInfo;
     date: {
@@ -29,3 +34,4 @@ export default interface ParkingInfo {
     amount: string;
     user: UserInfo
 }
+

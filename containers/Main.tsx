@@ -10,7 +10,7 @@ import IdentifyVehicle from './IdentifyVehicle';
 // TODO: Mock data
 import { parkingInfo } from '../mock';
 
-const Main: FunctionComponent = () => {
+export default function MainScreen({ navigation }) {
   const { setParkingInfo } = useParkingContext();
 
   // Set parkign data
@@ -23,10 +23,10 @@ const Main: FunctionComponent = () => {
       <CloseIcon type="close" style={styles.closeIcon} />
       <Header />
       <ParkingInfo />
-      <IdentifyVehicle />
+      <IdentifyVehicle navigation={navigation} />
     </ScrollView>
   );
-};
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -39,5 +39,3 @@ const styles = StyleSheet.create({
     marginBottom: 30,
   },
 });
-
-export default Main;

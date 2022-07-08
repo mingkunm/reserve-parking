@@ -5,15 +5,28 @@ import { Camera } from 'expo-camera';
 import Text from '../components/Text';
 import { Camera as CameraIcon } from '../components/Icons';
 
-const IdentifyVehicle: FunctionComponent = () => {
+import { Screens } from '../types';
+
+interface IdentifyVehicleProps {
+  navigation: any;
+}
+
+const IdentifyVehicle: FunctionComponent<IdentifyVehicleProps> = ({ navigation }) => {
   const [hasPermission, setHasPermission] = useState(false);
+
+  useEffect(() => {
+    (async () => {
+      const { status } = await Camera.requestCameraPermissionsAsync();
+      setHasPermission(status === 'granted');
+    })();
+  }, []);
 
   const handleClick = async () => {
     const { status } = await Camera.requestCameraPermissionsAsync();
     setHasPermission(status === 'granted');
 
     if (hasPermission) {
-      // TODO:
+      navigation.navigate(Screens.Camera);
     } else if (status === 'denied') {
       Alert.alert(
         'Permission request',
