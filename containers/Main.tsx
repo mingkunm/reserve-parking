@@ -31,8 +31,7 @@ const Main: FunctionComponent = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: '10%',
-    paddingBottom: 50,
+    marginTop: '10%',
     paddingHorizontal: 16,
   },
   closeIcon: {

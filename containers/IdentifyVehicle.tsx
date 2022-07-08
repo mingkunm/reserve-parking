@@ -18,11 +18,9 @@ const IdentifyVehicle: FunctionComponent = () => {
 };
 
 const styles = StyleSheet.create({
-  container: {
-    marginTop: 24,
-  },
   button: {
     marginTop: 28,
+    marginBottom: 30,
     backgroundColor: 'black',
     height: 60,
     borderRadius: 24,
