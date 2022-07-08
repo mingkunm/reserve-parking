@@ -5,6 +5,9 @@ import { useParkingContext } from '../../context';
 import { Messages } from '../../components/Icons';
 import Text from '../../components/Text';
 
+// TODO: Static avatar
+const avatar1 = require('../../assets/images/profile-picture.jpg');
+
 const UserInfo: FunctionComponent = () => {
   const { avatar, name, owner } = useParkingContext().parkingInfo.user;
 
@@ -12,7 +15,7 @@ const UserInfo: FunctionComponent = () => {
     <View style={styles.container}>
       <View style={styles.content}>
         <View style={styles.userContainer}>
-          <Image source={avatar as any} style={styles.avatar} />
+          <Image source={avatar1} style={styles.avatar} />
           <View style={styles.userInfoContainer}>
             <Text weight="500" size={14}>
               {name}

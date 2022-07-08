@@ -9,6 +9,7 @@ import Clock from './Clock';
 import Receipt from './Receipt';
 import ArrowRight from './ArrowRight';
 import Messages from './Messages';
+import Camera from './Camera';
 
 export {
   Close,
@@ -22,4 +23,5 @@ export {
   Receipt,
   ArrowRight,
   Messages,
+  Camera,
 };

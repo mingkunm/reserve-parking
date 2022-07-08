@@ -29,7 +29,10 @@ const styles = StyleSheet.create({
     paddingTop: 40,
     backgroundColor: 'white',
     borderRadius: 8,
-    // TODO: box-shadow
+    shadowColor: 'rgba(0, 0, 0)',
+    shadowOffset: { width: 0, height: 0 },
+    shadowOpacity: 0.13,
+    shadowRadius: 16,
   },
   parkingIcon: {
     position: 'absolute',
