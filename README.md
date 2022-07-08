@@ -1,5 +1,5 @@
 ## Preview
 
-![preview](https://github.com/mingkunm/reserve-parking/blob/master/preview/preview.png)
+![preview](https://github.com/mingkunm/reserve-parking/blob/master/previews/preview.png)
 
-![compare](https://github.com/mingkunm/reserve-parking/blob/master/preview/compare.png)
+![compare](https://github.com/mingkunm/reserve-parking/blob/master/previews/compare.png)
