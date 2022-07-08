@@ -8,7 +8,7 @@ import IdentifyVehicle from './IdentifyVehicle';
 export default function MainScreen({ navigation }) {
   return (
     <ScrollView style={styles.container}>
-      <CloseIcon type="close" style={styles.closeIcon} />
+      <CloseIcon style={styles.closeIcon} />
       <Header />
       <ParkingInfo />
       <IdentifyVehicle navigation={navigation} />
