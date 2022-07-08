@@ -1,13 +1,41 @@
-import { FunctionComponent } from 'react';
-import { View, TouchableOpacity, StyleSheet } from 'react-native';
+import { FunctionComponent, useState, useEffect } from 'react';
+import { View, TouchableOpacity, StyleSheet, Linking, Alert } from 'react-native';
+import { Camera } from 'expo-camera';
 
 import Text from '../components/Text';
-import { Camera } from '../components/Icons';
+import { Camera as CameraIcon } from '../components/Icons';
 
 const IdentifyVehicle: FunctionComponent = () => {
+  const [hasPermission, setHasPermission] = useState(false);
+
+  const handleClick = async () => {
+    const { status } = await Camera.requestCameraPermissionsAsync();
+    setHasPermission(status === 'granted');
+
+    if (hasPermission) {
+      // TODO:
+    } else if (status === 'denied') {
+      Alert.alert(
+        'Permission request',
+        'We need you allow us to access your Camera to identify your vehicle.',
+        [
+          {
+            text: 'Cancel',
+            onPress: () => console.log('Cancel Pressed'),
+            style: 'cancel',
+          },
+          {
+            text: 'Settings',
+            onPress: () => void Linking.openSettings(),
+          },
+        ]
+      );
+    }
+  };
+
   return (
-    <TouchableOpacity style={styles.button}>
-      <Camera />
+    <TouchableOpacity style={styles.button} onPress={handleClick}>
+      <CameraIcon />
       <View style={styles.textContainer}>
         <Text weight="900" size={18} style={styles.text}>
           Identify your vehicle
