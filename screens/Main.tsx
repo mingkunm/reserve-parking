@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { StyleSheet, SafeAreaView, ImageBackground, View } from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
 
 import Main from '../containers/Main';
 import Map from '../containers/Map';
@@ -18,11 +19,15 @@ export default function App({ navigation }) {
 
   return (
     // <ImageBackground source={backgroundImage} resizeMode="cover" style={styles.background}>
-    <View style={{ flex: 1 }}>
+    <View style={styles.container}>
       <Map />
-      <SafeAreaView style={styles.container}>
-        <Main navigation={navigation} />
-      </SafeAreaView>
+      <LinearGradient
+        colors={['rgba(246, 198, 45, 0.8)', 'rgba(246, 198, 45, 1)']}
+        style={styles.linearGradient}>
+        <SafeAreaView style={styles.container}>
+          <Main navigation={navigation} />
+        </SafeAreaView>
+      </LinearGradient>
     </View>
     // </ImageBackground>
   );
@@ -31,9 +36,14 @@ export default function App({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'rgba(246, 198, 45, 0.8)',
   },
   background: {
     flex: 1,
+  },
+  linearGradient: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: '100%',
+    width: '100%',
   },
 });
