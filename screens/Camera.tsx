@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, SafeAreaView } from 'react-native';
 import { Camera, CameraType } from 'expo-camera';
 
 import { Screens } from '../types';
@@ -22,26 +22,34 @@ export default function CameraScreen({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <Camera style={styles.camera} type={type}>
-        <View style={styles.buttonContainer}>
-          <TouchableOpacity
-            style={styles.button}
-            onPress={() => {
-              setType(type === CameraType.back ? CameraType.front : CameraType.back);
-            }}>
-            <Text style={styles.text}> Flip </Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.button} onPress={() => navigation.navigate(Screens.Main)}>
-            <Text style={styles.text}> Go Back </Text>
-          </TouchableOpacity>
-        </View>
-      </Camera>
+      <SafeAreaView style={styles.safeAreaContainer}>
+        <Camera style={styles.camera} type={type}>
+          <View style={styles.buttonContainer}>
+            <TouchableOpacity
+              style={styles.button}
+              onPress={() => navigation.navigate(Screens.Main)}>
+              <Text style={styles.text}> Back </Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={styles.button}
+              onPress={() => {
+                setType(type === CameraType.back ? CameraType.front : CameraType.back);
+              }}>
+              <Text style={styles.text}> Flip </Text>
+            </TouchableOpacity>
+          </View>
+        </Camera>
+      </SafeAreaView>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
+    backgroundColor: 'black',
+  },
+  safeAreaContainer: {
     flex: 1,
   },
   camera: {
@@ -52,10 +60,10 @@ const styles = StyleSheet.create({
     backgroundColor: 'transparent',
     flexDirection: 'row',
     margin: 20,
+    justifyContent: 'space-between',
   },
   button: {
-    flex: 0.1,
-    alignSelf: 'flex-end',
+    flex: 1,
     alignItems: 'center',
   },
   text: {
