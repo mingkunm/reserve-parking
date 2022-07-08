@@ -34,8 +34,8 @@ const parkingInfo: ParkingInfo = {
     position: {
         latitude: 34.08215,
         longitude: -118.37625,
-        latitudeDelta: 0.0922,
-        longitudeDelta: 0.0421,
+        latitudeDelta: 0.008,
+        longitudeDelta: 0.008,
     }
 }
 

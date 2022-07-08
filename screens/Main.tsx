@@ -22,7 +22,7 @@ export default function App({ navigation }) {
     <View style={styles.container}>
       <Map />
       <LinearGradient
-        colors={['rgba(246, 198, 45, 0.8)', 'rgba(246, 198, 45, 1)']}
+        colors={['rgba(246, 198, 45, 0.85)', 'rgba(246, 198, 45, 1)']}
         style={styles.linearGradient}>
         <SafeAreaView style={styles.container}>
           <Main navigation={navigation} />
