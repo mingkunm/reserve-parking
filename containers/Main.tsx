@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingTop: '10%',
-    paddingBottom: 40,
+    paddingBottom: 50,
     paddingHorizontal: 16,
   },
   closeIcon: {
