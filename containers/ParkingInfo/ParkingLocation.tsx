@@ -73,6 +73,7 @@ const styles = StyleSheet.create({
     color: '#118AA3',
     marginLeft: 3,
     letterSpacing: 1,
+    textTransform: 'uppercase',
   },
 });
 
