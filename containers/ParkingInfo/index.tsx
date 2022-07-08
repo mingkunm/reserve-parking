@@ -3,14 +3,11 @@ import { View, StyleSheet } from 'react-native';
 
 import ParkingLocation from './ParkingLocation';
 import { Parking as ParkingIcon } from '../../components/Icons';
-import { useParkingContext } from '../../context';
 import ParkingDates from './ParkingDates';
 import LinksList from './LinksList';
 import UserInfo from './UserInfo';
 
 const Content: FunctionComponent = () => {
-  const parkingContext = useParkingContext();
-
   return (
     <View style={styles.container}>
       <ParkingIcon style={styles.parkingIcon} />
