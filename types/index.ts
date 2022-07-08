@@ -5,7 +5,7 @@ interface LocationInfo {
     more: string;
   }
 
-interface ParkingDate {
+export interface ParkingDate {
     date: string;
     year: string;
     time: string;

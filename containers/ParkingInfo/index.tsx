@@ -1,9 +1,10 @@
 import { FunctionComponent } from 'react';
 import { View, StyleSheet } from 'react-native';
 
-import Location from './Location';
+import ParkingLocation from './ParkingLocation';
 import { Parking as ParkingIcon } from '../../components/Icons';
 import { useParkingContext } from '../../context';
+import ParkingDates from './ParkingDates';
 
 const Content: FunctionComponent = () => {
   const parkingContext = useParkingContext();
@@ -11,7 +12,8 @@ const Content: FunctionComponent = () => {
   return (
     <View style={styles.container}>
       <ParkingIcon style={styles.parkingIcon} />
-      <Location />
+      <ParkingLocation />
+      <ParkingDates />
     </View>
   );
 };
@@ -21,7 +23,6 @@ const styles = StyleSheet.create({
     flex: 1,
     marginTop: 30,
     paddingTop: 40,
-    paddingHorizontal: 24,
     backgroundColor: 'white',
     borderRadius: 8,
     // TODO: box-shadow

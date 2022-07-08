@@ -43,6 +43,7 @@ const styles = StyleSheet.create({
     flex: 1,
     marginBottom: 30,
     backgroundColor: 'transparent',
+    paddingHorizontal: 24,
   },
   addressContainer: {
     flexDirection: 'row',
