@@ -5,6 +5,7 @@ import ParkingLocation from './ParkingLocation';
 import { Parking as ParkingIcon } from '../../components/Icons';
 import { useParkingContext } from '../../context';
 import ParkingDates from './ParkingDates';
+import LinksList from './LinksList';
 
 const Content: FunctionComponent = () => {
   const parkingContext = useParkingContext();
@@ -14,6 +15,7 @@ const Content: FunctionComponent = () => {
       <ParkingIcon style={styles.parkingIcon} />
       <ParkingLocation />
       <ParkingDates />
+      <LinksList />
     </View>
   );
 };
